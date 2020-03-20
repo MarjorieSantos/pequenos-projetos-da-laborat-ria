@@ -5,14 +5,7 @@ body {
     text-align: center;
 }
 
-.correct {
-    border: 3px solid rosybrown;
-    display: inline-block;
-    height: 200px;
-}
-
-.wrong {
-    border: 3px solid rosybrown;
-    display: inline-block;
-    height: 200px;
+p{
+    font-size: 20px;
+    font-weight: bold;
 }
