@@ -9,3 +9,34 @@ p{
     font-size: 20px;
     font-weight: bold;
 }
+
+#after {
+    visibility: hidden;
+} 
+
+#nome {
+    background-color: rgb(255, 196, 196);
+    border-color: black;
+}
+
+.btn {
+    background-color: rgb(255, 196, 196);
+    border-color: black;
+    font-weight: bold;
+}
+
+.btn-enviar{
+    background-color: rgb(255, 196, 196);
+    border-color: black;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#btn_voltar{
+    background-color: rgb(255, 196, 196);
+    border-color: black;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+}
+

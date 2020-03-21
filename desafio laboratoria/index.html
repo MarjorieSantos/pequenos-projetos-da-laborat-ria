@@ -9,69 +9,56 @@
 <body>
     <h1 class="boas_vindas">Seja bem-vindo!</h1>
 
-    <p>Insira seu nome para começar a jogar.</p>
-        <input type="text" id="nome">
-        <input type="submit" onclick="enviar()" value="confirmar">
-        <br>
-    <p id="nomeDigitado"></p>
+    <form id="quiz" name="quiz">
+        <section id="campo-da-pergunta">
+            <p>Insira seu nome para começar a jogar.</p>
+            <input type="text" id="nome" name="nome">
+            <input type="button" onclick="enviar(event)" class="btn" value="confirmar">
+        </section>
 
-    <br>
+        <p id="nomeDigitado"></p>
 
-    <input type="radio" name="option" id="frutas" value="primeiro" onclick="op_frutas()">
-    <label for="frutas">Frutas</label>
-    
-    <input type="radio" name="option" id="animais" value="segundo" onclick="op_animais()">
-    <label for="animais">Animais</label>
+        <div id="btn_perguntas" style="display: none;">
+        <input type="radio" name="option" id="frutas" value="primeiro" onclick="op_frutas()">
+        <label for="frutas">Frutas</label>
+        
+        <input type="radio" name="option" id="animais" value="segundo" onclick="op_animais()">
+        <label for="animais">Animais</label>
+        </div>
+
+        <div id="duas_perguntas">
+        <div  style="display: none;" id="p_frutas" >
+                <p>1. O que significa watermelon?</p>
+                <input type="radio" name="opcao" id="melancia" value="Melancia"> <label for="melancia">Melancia</label>
+                <input type="radio" name="opcao" id="melancia2" value="Pitaia"> <label for="melancia2">Pitáia</label>
+
+                <p>2. Strawberry quer dizer?</p>
+                <input type="radio" name="opcao2" id="morango" value="Morango"> <label for="morango">Morango</label>
+                <input type="radio" name="opcao2" id="morango2" value="Beterraba"> <label for="morango2">Beterraba</label>
+        </div>
 
 
-    
-    <div  style="display: none;" id="p_frutas" >
-            <p>O que significa watermelon?</p>
-            <input type="radio" name="opcao" id="melancia1"> <label for="melancia1">Melancia</label>
-            <input type="radio" name="opcao" id="melancia2"> <label for="melancia2">Kiwi</label>
-            <input type="radio" name="opcao" id="melancia3"> <label for="melancia3">Pitáia</label>
+        <div style="display: none;" id="p_animais">
+                <p>1. Qual a maior aranha do Brasil?</p>
+                <input type="radio" name="opcao3" id="golias" value="Golias"> <label for="golias">Golias</label>
+                <input type="radio" name="opcao3" id="golias2" value="Viúva Negra"> <label for="golias2">Viúva Negra</label>
 
-            <p>Como se escreve maça em inglês?</p>
-            <input type="radio" name="opcao2" id="apple1"> <label for="apple1">Apple</label>
-            <input type="radio" name="opcao2" id="apple2"> <label for="apple2">Mango</label>
-            <input type="radio" name="opcao2" id="apple3"> <label for="apple3">Pinaple</label>
+                <p>2. Quem possui 8 tentáculos?</p>
+                <input type="radio" name="opcao4" id="polvo" value="Polvo"> <label for="polvo">Polvo</label>
+                <input type="radio" name="opcao4" id="polvo2" value="Água"> <label for="polvo2">Água Viva</label>
+        </div>
+        </div>
+    </form>
 
-            <p>Strawberry quer dizer?</p>
-            <input type="radio" name="opcao3" id="morango1"> <label for="morango1">Morango</label>
-            <input type="radio" name="opcao3" id="morango2"> <label for="morango2">Banana</label>
-            <input type="radio" name="opcao3" id="morango3"> <label for="morango3">Beterraba</label>
+    <div id="check" style="display: none;">
+        <input type="button" class="btn-enviar" value="enviar" onclick="check()" >
     </div>
 
-
-    <div style="display: none;" id="p_animais">
-            <p>Qual a maior aranha do Brasil?</p>
-            <input type="radio" name="opcao" id="golias1"> <label for="golias1">Golias</label>
-            <input type="radio" name="opcao" id="golias2"> <label for="golias2">Viúva Negra</label>
-            <input type="radio" name="opcao" id="golias3"> <label for="golias3">Aranha Marrom</label>
-
-            <p>Quem é o sei da floresta?</p>
-            <input type="radio" name="opcao2" id="lion1"> <label for="lion1">Leão</label>
-            <input type="radio" name="opcao2" id="lion2"> <label for="lion2">Rinoceronte</label>
-            <input type="radio" name="opcao2" id="lion3"> <label for="lion3">Hipopótamo</label>
-
-            <p>Quem possui 8 tentáculos?</p>
-            <input type="radio" name="opcao3" id="polvo1"> <label for="polvo1">Lula</label>
-            <input type="radio" name="opcao3" id="polvo2"> <label for="polvo2">Polvo</label>
-            <input type="radio" name="opcao3" id="polvo3"> <label for="polvo3">Água Viva</label>
+    <div id="after">
+        <p id="resposta_correta"></p>
     </div>
 
-    <input type="submit" value="responder" name="respostas" id="responstas" onclick="responder_perguntas()">
-
-    <span id="corretas"></span>
-
-    <!--
-    <input type="radio" name="option" id="frutas" value="primeiro" onclick="op_frutas()">
-    <label for="frutas">Frutas</label>
-    
-    <input type="radio" name="option" id="animais" value="segundo" onclick="op_animais()">
-    <label for="animais">Animais</label>-->
-    <br>
-
+    <input type="button" id="btn_voltar" onclick="voltar()" value="Voltar a jogar" style="display: none;">
     <script src="main.js"></script>
 </body>
 </html>
