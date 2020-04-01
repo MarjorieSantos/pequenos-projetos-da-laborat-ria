@@ -1,0 +1,39 @@
+/*body {
+    background-image: url(img/background2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    color: #052440;
+}
+
+p, label{
+    text-align: center;
+    color: #052440;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header p{
+    padding-top: 0;
+}
+
+.form-initial {
+    display: flex;
+    justify-content: center;
+}
+
+input, select{
+    border: 3px solid #F20C36;
+    border-radius: 5px;
+}
+
+#escolha {
+    text-align: center;
+}
